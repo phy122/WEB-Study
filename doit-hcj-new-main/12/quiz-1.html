@@ -14,10 +14,21 @@
     .container {      
       width: 600px;
       height: 500px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+      gap: 10px;
     }
     .container > div {
       border: 1px solid #222;
       text-align: center;
+    }
+
+    .container > div:nth-child(even) {  /* 짝수 번째 셀 */
+      background-color: #fa8072;
+    }
+    .container > div:nth-child(odd) {  /* 홀수 번째 셀 */
+      background-color: #fabcb5;
     }
   </style>
 </head>
