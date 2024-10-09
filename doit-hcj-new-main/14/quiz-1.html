@@ -16,6 +16,12 @@
       height: 200px;
       background: url('images/ball.png') no-repeat;
       background-size: 100%;
+      animation: move 2s infinite alternate linear;
+    }
+
+    @keyframes move{
+      from{transform: translateX(-800px) rotate(0);}
+      to{transform: translateX(800px) rotate(360deg);}
     }
 	</style>
 </head>

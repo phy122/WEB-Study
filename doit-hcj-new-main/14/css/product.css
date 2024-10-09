@@ -17,6 +17,7 @@ h1 {
 }
 
 .prod-list li {
+  position: relative;
   padding: 0;
   margin: 10px;
   overflow: hidden;
@@ -27,4 +28,26 @@ h1 {
   width: 100%; /* 이미지가 항목의 너비에 맞게 조정 */
   height: auto; /* 이미지 비율 유지 */
   z-index: 5;
+}
+
+.prod-list .caption{
+  position: absolute;
+  top: 200px;
+  width: 300px;
+  height: 200px;
+  padding-top: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
+}
+
+.prod-list li:hover .caption{
+  opacity: 1;
+  transform: translateY(-200px);
+}
+
+.prod-list .caption h2, .prod-list .caption p{
+  color: #fff;
+  text-align: center;
 }

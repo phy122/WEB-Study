@@ -19,8 +19,31 @@
       color: #fff;
       outline: 2px solid #fff;  
       padding:20px 60px;
+      position: relative;
+      overflow: hidden;
+      transition: color 1s;
     }
 
+    .button::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50px;
+      width: 0;
+      height: 100%;
+      background-color: #fff;
+      z-index: -5;
+      transform: skewX(35deg);
+      transition: width 1s;
+    }
+
+    .button:hover{
+      color: #ff5e62;
+    }
+
+    .button:hover::before{
+      width: 150%;
+    }
   </style>
 </head>
 
