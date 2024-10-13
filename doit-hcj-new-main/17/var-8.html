@@ -8,7 +8,15 @@
 <body>
 	<script>		
     // Do it! 호이스팅이 없는 let 변수
+    let x = 10;
 
+    function display(){
+      console.log(x);
+      console.log(y);
+      let y = 20;
+    }
+
+    display();
   </script>
 </body>
 </html>
